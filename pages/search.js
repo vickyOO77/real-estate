@@ -65,7 +65,7 @@ const Search = ({properties}) => {
   
     //gerereating data using queries of filters in URL or default values 
     const data = await fetchApi(`${baseUrl}/properties/list?purpose=${purpose}&locationExternalIDs=${locationExternalIDs}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
-
+    
     return {
       props: {
         properties: data?.hits,
